@@ -148,3 +148,78 @@ footer {
   color: white;
   margin-top: 30px;
 }
+
+/* ==== RESPONSIVE DESIGN ==== */
+
+/* Pour les tablettes et petits écrans (max-width: 768px) */
+@media (max-width: 768px) {
+  /* HERO */
+  #hero {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* ABOUT */
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-container img {
+    width: 120px;
+  }
+
+  /* SKILLS */
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-list li {
+    width: 80%;
+    text-align: center;
+  }
+
+  /* PROJECTS */
+  .projects-container {
+    grid-template-columns: 1fr; /* 1 colonne sur petits écrans */
+  }
+
+  .project-card img {
+    width: 100%;
+  }
+}
+
+/* Pour les très petits écrans (max-width: 480px) */
+@media (max-width: 480px) {
+  section {
+    padding: 40px 15px;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    padding: 12px 20px;
+  }
+
+  .skills-list li {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .project-links a {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
