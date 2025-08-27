@@ -6,31 +6,6 @@
   <title>Portfolio - Gradi KUSANIKA NAWEJ'</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  // Sélectionner toutes les sections
-  const sections = document.querySelectorAll("section");
-
-  // Options de l'observer
-  const options = {
-    threshold: 0.2 // déclenche quand 20% de la section est visible
-  };
-
-  // Fonction callback de l'observer
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target); // éviter de rejouer à chaque scroll
-      }
-    });
-  }, options);
-
-  // Observer chaque section
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-</script>
-
 <body>
 
   <!-- ===== HEADER / HERO ===== -->
