@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Gradi KUSANIKA NAWEJ'</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  // Sélectionner toutes les sections
+  const sections = document.querySelectorAll("section");
+
+  // Options de l'observer
+  const options = {
+    threshold: 0.2 // déclenche quand 20% de la section est visible
+  };
+
+  // Fonction callback de l'observer
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target); // éviter de rejouer à chaque scroll
+      }
+    });
+  }, options);
+
+  // Observer chaque section
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+<body>
+
+  <!-- ===== HEADER / HERO ===== -->
+  <header id="hero">
+    <div class="hero-content">
+      <h1>Hello, I’m <span>Gradi KUSANIKA NAWEJ'</span></h1>
+      <h2>Web Development Student</h2>
+      <p>I build modern and responsive websites using HTML, CSS, and JavaScript.</p>
+      <div class="hero-buttons">
+        <a href="cv.pdf" target="_blank" class="btn">📄 View my CV</a>
+        <a href="https://www.linkedin.com/in/gradi-nawej-b41131381/" target="_blank" class="btn">🔗 LinkedIn</a>
+        <a href="https://github.com/gradi256" target="_blank" class="btn">💻 GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="img/profil.png" alt="Profile Photo">
+      <p>
+        Passionate web development student, specialized in creating simple and modern applications. 
+        Curious and motivated, I keep learning front-end and back-end technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript (ES6+)</li>
+      <!-- <li>Responsive Design</li> -->
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+
+      <!-- <div class="project-card">
+        <img src="images/projet1.png" alt="Project 1">
+        <h3>E-commerce Site (Demo)</h3>
+        <p>A showcase e-commerce site built with HTML, CSS, and JS.</p>
+        <div class="project-links">
+          <a href="https://your-live-link.com" target="_blank">🚀 View Project</a>
+          <a href="https://github.com/gradi256/project-name" target="_blank">💻 View Code</a>
+        </div>
+      </div> -->
+
+      <div class="project-card">
+        <img src="img/capture-acolytat.png" alt="Project 2">
+        <h3>Acolytat Sainte Rita Site</h3>
+        <p>A showcase site for Acolytat Sainte Rita, built with HTML, CSS, and JS.</p>
+        <div class="project-links">
+          <a href="https://acolytat-sainte-rita.netlify.app/" target="_blank">🚀 View Project</a>
+          <a href="https://github.com/gradi256/Acolytat-Sainte_Rita.git" target="_blank">💻 View Code</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:gradinawej8@gmail.com">gradinawej8@gmail.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/gradi-nawej-b41131381/" target="_blank">My LinkedIn</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Gradi KUSANIKA NAWEJ – Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
